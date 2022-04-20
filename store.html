@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sudsy Soaps</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">Soap Store</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Soap</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Charcoal Moss Soap</span>
+                    <img class="shop-item-image" src="./images/AlgaeSoap.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$14.99 (3 bars)</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Pink Pepper Soap</span>
+                    <img class="shop-item-image" src="./images/PinkSoap.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$5 per bar</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Brown Cinnamon Soap</span>
+                    <img class="shop-item-image" src="./images/BrownSoap.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$5 per bar</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./images/AlgaeSoap.jpg" width="100" height="100">
+                        <span class="cart-item-title">Moss Charcoal Soap</span>
+                    </div>
+                    <span class="cart-price cart-column">$14.99</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">REMOVE</button>
+                    </div>
+                </div>
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./images/PinkSoap.jpg" width="100" height="100">
+                        <span class="cart-item-title">Pink Pepper Soap</span>
+                    </div>
+                    <span class="cart-price cart-column">$5</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">REMOVE</button>
+                    </div>
+                </div>
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./images/BrownSoap.jpg" width="100" height="100">
+                        <span class="cart-item-title">Brown Cinnamon Soap</span>
+                    </div>
+                    <span class="cart-price cart-column">$5</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">REMOVE</button>
+                    </div>
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                
+            </div>
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                
+                
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">The Soap Merchant</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=WFXvLt5ilv8" target="_blank">
+                            <img src="./images/Clicks.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=ACtj9PmWmoM" target="_blank">
+                            <img src="./images/Lily.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/john-louis-dell/?originalSubdomain=pr" target="_blank">
+                            <img src="./images/Dell.jpg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script src="store.js"></script>
+    </body>
+</html>
